@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+
+{% block main_content %}
+<h2>Leader board</h2>
+<table>
+    {% for row in scores %}
+        <tr>
+            <td>{{row["userName"]}}</a></td>
+            <td>{{row["score"]}}</td>
+        </tr>
+    {% endfor %}
+</table>
+<p><a href="{{url_for('zombieRun')}}">Play</a></p>
+<h2>Instructions</h2>
+<p>Shoot: space</p>
+<p>movements: arrow keys</p>
+<p>lime square: player</p>
+<p>red squares: zombies(enemies)</p>
+<p>dark blue squares: barricade</p>
+<p>skyblue squares: power up, slows down zombies</p>
+<p>grey squares: power up, make your bullet bigger</p>
+<p>cyan squares: change your weapon to shotgun</p>
+<p>don't get caught my zombies</p>
+{% endblock %}
